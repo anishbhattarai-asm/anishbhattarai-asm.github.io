@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nepal-pay: eSewa and Khalti SDKs for Node.js | Anish Bhattarai</title>
+<meta name="description" content="Zero-dependency TypeScript SDKs for accepting eSewa and Khalti payments safely.">
+<meta name="author" content="Anish Bhattarai">
+<link rel="canonical" href="https://anishbhattarai-asm.github.io/projects/nepal-pay/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="nepal-pay: eSewa and Khalti SDKs for Node.js | Anish Bhattarai">
+<meta property="og:description" content="Zero-dependency TypeScript SDKs for accepting eSewa and Khalti payments safely.">
+<meta property="og:url" content="https://anishbhattarai-asm.github.io/projects/nepal-pay/">
+<meta property="og:image" content="https://github.com/anishbhattarai-asm.png?size=240">
+<meta name="twitter:card" content="summary">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"nepal-pay","description":"Zero-dependency TypeScript SDKs for accepting eSewa and Khalti payments safely.","url":"https://anishbhattarai-asm.github.io/projects/nepal-pay/","codeRepository":"https://github.com/anishbhattarai-asm/nepal-pay","programmingLanguage":"TypeScript","license":"https://opensource.org/licenses/MIT","keywords":"nodejs, typescript, payments, payment-gateway, nepal, zero-dependency","author":{"@type":"Person","name":"Anish Bhattarai","url":"https://anishbhattarai-asm.github.io/","image":"https://github.com/anishbhattarai-asm.png?size=240","sameAs":["https://github.com/anishbhattarai-asm","https://www.npmjs.com/~anishbhattarai"]}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar">
+  <div class="wrap"><a href="/">&larr; Anish Bhattarai</a></div>
+</header>
+<main id="main" class="wrap project">
+<p class="eyebrow">Payments in Nepal</p>
+<h1>nepal-pay</h1>
+<p class="lead">Zero-dependency TypeScript SDKs for accepting eSewa and Khalti payments safely.</p>
+<p class="meta"><span class="lang">TypeScript</span><span class="tag">MIT</span></p>
+<p class="actions"><a class="button" href="https://github.com/anishbhattarai-asm/nepal-pay">View on GitHub</a><a class="button ghost" href="https://www.npmjs.com/package/@nepalpay/esewa">@nepalpay/esewa on npm</a><a class="button ghost" href="https://www.npmjs.com/package/@nepalpay/khalti">@nepalpay/khalti on npm</a></p>
+
+<h2>About</h2>
+<p>nepal-pay gives Node.js apps one small API for the two most used payment gateways in Nepal: <code>initiate()</code>, <code>parseCallback()</code> and <code>verify()</code>. It signs the eSewa payment form, checks signed callbacks, converts rupees to paisa for Khalti, and confirms every payment with the gateway before an order is treated as paid.</p>
+<p>It was built against the real eSewa and Khalti sandboxes and handles the quirks found there, such as eSewa signing <code>total_amount=1000.0</code> while sending <code>1000.0</code> as a JSON number, callbacks that choose their own signed fields, and Khalti answering cancelled payments with HTTP 400.</p>
+<h2>Highlights</h2>
+<ul class="highlights"><li>The same three methods for both gateways</li><li>Every payment confirmed with the gateway, with the amount checked against your own records</li><li>Zero runtime dependencies; ESM, CommonJS and TypeScript types</li><li>209 unit tests plus live sandbox tests, with CI on Node.js 22, 24 and 26</li></ul>
+<h2>Quick start</h2>
+<pre><code class="language-sh">npm i @nepalpay/esewa @nepalpay/khalti</code></pre>
+<h2>Topics</h2>
+<p class="meta"><span class="tag">nodejs</span><span class="tag">typescript</span><span class="tag">payments</span><span class="tag">payment-gateway</span><span class="tag">nepal</span><span class="tag">zero-dependency</span></p>
+<p class="source">Source code, issues and full documentation: <a href="https://github.com/anishbhattarai-asm/nepal-pay">github.com/anishbhattarai-asm/nepal-pay</a></p>
+<h2>Related projects</h2>
+<ul class="related"><li><a href="/projects/nepalqr/">nepalqr</a>: Turn a merchant&#39;s free static NepalQR into a dynamic QR that carries the amount.</li></ul>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <p>&copy; 2026 Anish Bhattarai. Projects are MIT licensed.</p>
+    <p><a href="https://github.com/anishbhattarai-asm">GitHub</a> <span aria-hidden="true">&middot;</span> <a href="https://www.npmjs.com/~anishbhattarai">npm</a></p>
+  </div>
+</footer>
+</body>
+</html>

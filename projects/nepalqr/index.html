@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nepalqr: dynamic amounts for NepalQR | Anish Bhattarai</title>
+<meta name="description" content="Turn a merchant&#39;s free static NepalQR into a dynamic QR that carries the amount.">
+<meta name="author" content="Anish Bhattarai">
+<link rel="canonical" href="https://anishbhattarai-asm.github.io/projects/nepalqr/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="nepalqr: dynamic amounts for NepalQR | Anish Bhattarai">
+<meta property="og:description" content="Turn a merchant&#39;s free static NepalQR into a dynamic QR that carries the amount.">
+<meta property="og:url" content="https://anishbhattarai-asm.github.io/projects/nepalqr/">
+<meta property="og:image" content="https://github.com/anishbhattarai-asm.png?size=240">
+<meta name="twitter:card" content="summary">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"nepalqr","description":"Turn a merchant's free static NepalQR into a dynamic QR that carries the amount.","url":"https://anishbhattarai-asm.github.io/projects/nepalqr/","codeRepository":"https://github.com/anishbhattarai-asm/nepalqr","programmingLanguage":"JavaScript","license":"https://opensource.org/licenses/MIT","keywords":"qr-code, payments, pos, nepal, zero-dependency","author":{"@type":"Person","name":"Anish Bhattarai","url":"https://anishbhattarai-asm.github.io/","image":"https://github.com/anishbhattarai-asm.png?size=240","sameAs":["https://github.com/anishbhattarai-asm","https://www.npmjs.com/~anishbhattarai"]}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar">
+  <div class="wrap"><a href="/">&larr; Anish Bhattarai</a></div>
+</header>
+<main id="main" class="wrap project">
+<p class="eyebrow">Payments in Nepal</p>
+<h1>nepalqr</h1>
+<p class="lead">Turn a merchant&#39;s free static NepalQR into a dynamic QR that carries the amount.</p>
+<p class="meta"><span class="lang">JavaScript</span><span class="tag">MIT</span></p>
+<p class="actions"><a class="button" href="https://github.com/anishbhattarai-asm/nepalqr">View on GitHub</a><a class="button ghost" href="https://anishbhattarai-asm.github.io/nepalqr/">Open the web app</a></p>
+
+<h2>About</h2>
+<p>A Nepali merchant QR is an EMVCo Merchant-Presented Mode payload. nepalqr decodes the merchant&#39;s existing static QR, sets the amount for each order, marks it dynamic and recomputes the checksum, so the customer scans and sees the amount already filled in. No payment aggregator and no integration fees.</p>
+<p>It was tested against real Fonepay merchant QRs: the library reproduced the issuers&#39; own checksums byte for byte, and a Rs 1.00 dynamic QR scanned with eSewa settled. The README is clear about the limits: that is one acquirer at one point in time, and whether you are permitted to do it is a separate question.</p>
+<p>The repo also includes a web app that runs entirely in the browser: scan the static QR once, type an amount, and show the dynamic QR. It installs to the home screen and works offline.</p>
+<h2>Highlights</h2>
+<ul class="highlights"><li>Zero dependencies</li><li>Decode, inspect and rebuild EMVCo QR payloads</li><li>Track open tabs and parse bank credit alerts for reconciliation</li><li>Installable offline web app with a camera scanner</li></ul>
+<h2>Quick start</h2>
+<pre><code class="language-js">import { withAmount } from &#39;nepalqr&#39;;
+
+const dynamicQR = withAmount(merchantStaticQR, 450.37);</code></pre>
+<h2>Topics</h2>
+<p class="meta"><span class="tag">qr-code</span><span class="tag">payments</span><span class="tag">pos</span><span class="tag">nepal</span><span class="tag">zero-dependency</span></p>
+<p class="source">Source code, issues and full documentation: <a href="https://github.com/anishbhattarai-asm/nepalqr">github.com/anishbhattarai-asm/nepalqr</a></p>
+<h2>Related projects</h2>
+<ul class="related"><li><a href="/projects/nepal-pay/">nepal-pay</a>: Zero-dependency TypeScript SDKs for accepting eSewa and Khalti payments safely.</li></ul>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <p>&copy; 2026 Anish Bhattarai. Projects are MIT licensed.</p>
+    <p><a href="https://github.com/anishbhattarai-asm">GitHub</a> <span aria-hidden="true">&middot;</span> <a href="https://www.npmjs.com/~anishbhattarai">npm</a></p>
+  </div>
+</footer>
+</body>
+</html>

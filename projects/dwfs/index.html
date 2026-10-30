@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DWFS: Draw With Fourier Series | Anish Bhattarai</title>
+<meta name="description" content="Turn any picture into one continuous line, then watch spinning circles draw it.">
+<meta name="author" content="Anish Bhattarai">
+<link rel="canonical" href="https://anishbhattarai-asm.github.io/projects/dwfs/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DWFS: Draw With Fourier Series | Anish Bhattarai">
+<meta property="og:description" content="Turn any picture into one continuous line, then watch spinning circles draw it.">
+<meta property="og:url" content="https://anishbhattarai-asm.github.io/projects/dwfs/">
+<meta property="og:image" content="https://github.com/anishbhattarai-asm.png?size=240">
+<meta name="twitter:card" content="summary">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"DWFS","description":"Turn any picture into one continuous line, then watch spinning circles draw it.","url":"https://anishbhattarai-asm.github.io/projects/dwfs/","codeRepository":"https://github.com/anishbhattarai-asm/DWFS","programmingLanguage":"Python","license":"https://opensource.org/licenses/MIT","keywords":"fourier, epicycles, animation, svg, mathart","author":{"@type":"Person","name":"Anish Bhattarai","url":"https://anishbhattarai-asm.github.io/","image":"https://github.com/anishbhattarai-asm.png?size=240","sameAs":["https://github.com/anishbhattarai-asm","https://www.npmjs.com/~anishbhattarai"]}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar">
+  <div class="wrap"><a href="/">&larr; Anish Bhattarai</a></div>
+</header>
+<main id="main" class="wrap project">
+<p class="eyebrow">Math and animation</p>
+<h1>DWFS</h1>
+<p class="lead">Turn any picture into one continuous line, then watch spinning circles draw it.</p>
+<p class="meta"><span class="lang">Python</span><span class="tag">MIT</span></p>
+<p class="actions"><a class="button" href="https://github.com/anishbhattarai-asm/DWFS">View on GitHub</a><a class="button ghost" href="https://anishbhattarai-asm.github.io/DWFS/">Try it in your browser</a><a class="button ghost" href="https://pypi.org/project/dwfs/">dwfs on PyPI</a></p>
+<figure class="shot"><img src="https://raw.githubusercontent.com/anishbhattarai-asm/DWFS/main/docs/demo.gif" alt="Two chains of circles drawing a horse as the number of terms grows" loading="lazy"></figure>
+<h2>About</h2>
+<p>DWFS traces a picture into a single closed path, works out its Fourier series, and opens a window where two chains of circles redraw it, sharpening from a rough loop into the exact drawing as more terms are added.</p>
+<p>It handles line drawings, photos, logos, flags and SVG files, and it can write text in one continuous line in any script your fonts cover, Nepali and other joined scripts included.</p>
+<h2>Highlights</h2>
+<ul class="highlights"><li>Detects whether it was given a line drawing, photo, logo or flag</li><li>Traces one continuous route along the strokes and lifts the pen over short gaps</li><li>Grows the number of terms pass by pass and shows the approximation error live</li><li>Interactive window with a timeline and one click saving to MP4, GIF or PNG</li><li>Runs from the command line or as a Python library</li></ul>
+<h2>Quick start</h2>
+<pre><code class="language-sh">pip install dwfs
+dwfs make photo.jpg
+dwfs text &quot;Hello World&quot;</code></pre>
+<h2>Topics</h2>
+<p class="meta"><span class="tag">fourier</span><span class="tag">epicycles</span><span class="tag">animation</span><span class="tag">svg</span><span class="tag">mathart</span></p>
+<p class="source">Source code, issues and full documentation: <a href="https://github.com/anishbhattarai-asm/DWFS">github.com/anishbhattarai-asm/DWFS</a></p>
+<h2>Related projects</h2>
+<ul class="related"><li><a href="/projects/mpx/">MTPX</a>: Write Manim animations as ordinary Python methods and get a PowerPoint deck where each method is one click.</li><li><a href="/projects/mbdp/">AttractorH</a>: Cinematic renders of strange attractors through a Manim, Blender and DaVinci Resolve pipeline.</li></ul>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <p>&copy; 2026 Anish Bhattarai. Projects are MIT licensed.</p>
+    <p><a href="https://github.com/anishbhattarai-asm">GitHub</a> <span aria-hidden="true">&middot;</span> <a href="https://www.npmjs.com/~anishbhattarai">npm</a></p>
+  </div>
+</footer>
+</body>
+</html>

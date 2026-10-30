@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MTPX: Manim animations as PowerPoint slides | Anish Bhattarai</title>
+<meta name="description" content="Write Manim animations as ordinary Python methods and get a PowerPoint deck where each method is one click.">
+<meta name="author" content="Anish Bhattarai">
+<link rel="canonical" href="https://anishbhattarai-asm.github.io/projects/mpx/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MTPX: Manim animations as PowerPoint slides | Anish Bhattarai">
+<meta property="og:description" content="Write Manim animations as ordinary Python methods and get a PowerPoint deck where each method is one click.">
+<meta property="og:url" content="https://anishbhattarai-asm.github.io/projects/mpx/">
+<meta property="og:image" content="https://github.com/anishbhattarai-asm.png?size=240">
+<meta name="twitter:card" content="summary">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"MTPX","description":"Write Manim animations as ordinary Python methods and get a PowerPoint deck where each method is one click.","url":"https://anishbhattarai-asm.github.io/projects/mpx/","codeRepository":"https://github.com/anishbhattarai-asm/MPX","programmingLanguage":"Python","license":"https://opensource.org/licenses/MIT","keywords":"manim, powerpoint, pptx, presentation, animation","author":{"@type":"Person","name":"Anish Bhattarai","url":"https://anishbhattarai-asm.github.io/","image":"https://github.com/anishbhattarai-asm.png?size=240","sameAs":["https://github.com/anishbhattarai-asm","https://www.npmjs.com/~anishbhattarai"]}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar">
+  <div class="wrap"><a href="/">&larr; Anish Bhattarai</a></div>
+</header>
+<main id="main" class="wrap project">
+<p class="eyebrow">Math and animation</p>
+<h1>MTPX</h1>
+<p class="lead">Write Manim animations as ordinary Python methods and get a PowerPoint deck where each method is one click.</p>
+<p class="meta"><span class="lang">Python</span><span class="tag">MIT</span></p>
+<p class="actions"><a class="button" href="https://github.com/anishbhattarai-asm/MPX">View on GitHub</a></p>
+
+<h2>About</h2>
+<p>Each <code>@slide</code> method is one click step. All slides share one Manim scene, so objects you keep on <code>self</code> persist from slide to slide and the deck plays as one continuous animation: the slide changes are invisible.</p>
+<p>Open the generated <code>.pptx</code>, press F5 and click. Each click advances a slide and its animation plays automatically. Slides run in source order, and a method without animation becomes a still image.</p>
+<h2>Highlights</h2>
+<ul class="highlights"><li>One method is one click, however many animations it plays</li><li>Continuous animation across slides, with no visible cuts</li><li>Holds each slide on its settled state so nothing flickers on the next click</li><li>Needs only manim, the pptx library and ffmpeg</li></ul>
+<h2>Quick start</h2>
+<pre><code class="language-python">from manim import *
+from mtpx import SlideScene, slide
+
+class Demo(SlideScene):
+    @slide(&quot;A square appears&quot;)
+    def square(self):
+        self.sq = Square(color=BLUE, fill_opacity=0.5)
+        self.play(Create(self.sq))
+
+    @slide(&quot;It moves&quot;)
+    def move(self):
+        self.play(self.sq.animate.shift(2 * RIGHT))</code></pre>
+<h2>Topics</h2>
+<p class="meta"><span class="tag">manim</span><span class="tag">powerpoint</span><span class="tag">pptx</span><span class="tag">presentation</span><span class="tag">animation</span></p>
+<p class="source">Source code, issues and full documentation: <a href="https://github.com/anishbhattarai-asm/MPX">github.com/anishbhattarai-asm/MPX</a></p>
+<h2>Related projects</h2>
+<ul class="related"><li><a href="/projects/dwfs/">DWFS</a>: Turn any picture into one continuous line, then watch spinning circles draw it.</li><li><a href="/projects/mbdp/">AttractorH</a>: Cinematic renders of strange attractors through a Manim, Blender and DaVinci Resolve pipeline.</li></ul>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <p>&copy; 2026 Anish Bhattarai. Projects are MIT licensed.</p>
+    <p><a href="https://github.com/anishbhattarai-asm">GitHub</a> <span aria-hidden="true">&middot;</span> <a href="https://www.npmjs.com/~anishbhattarai">npm</a></p>
+  </div>
+</footer>
+</body>
+</html>
