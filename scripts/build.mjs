@@ -10,6 +10,7 @@ const NAME = 'Anish Bhattarai';
 const NPM = 'https://www.npmjs.com/~anishbhattarai';
 const AVATAR = `${GITHUB}.png?size=240`;
 const INTRO = 'Open source tools for payments in Nepal, math animation, and video and streaming automation.';
+const GOOGLE_VERIFY = 'j8reBdE3fEtpz5bDb62e8pweoYer8cZxdplri8LsFM8';
 
 const esc = (s) =>
   String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
@@ -42,6 +43,7 @@ function page({ title, description, path, jsonLd, body }) {
 <meta property="og:image" content="${AVATAR}">
 <meta name="twitter:card" content="summary">
 <meta name="color-scheme" content="light dark">
+<meta name="google-site-verification" content="${GOOGLE_VERIFY}">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, '\\u003c')}</script>
