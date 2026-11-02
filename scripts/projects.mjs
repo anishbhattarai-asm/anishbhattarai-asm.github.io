@@ -21,6 +21,7 @@ export const projects = [
     links: [
       { label: '@nepalpay/esewa on npm', href: 'https://www.npmjs.com/package/@nepalpay/esewa' },
       { label: '@nepalpay/khalti on npm', href: 'https://www.npmjs.com/package/@nepalpay/khalti' },
+      { label: 'Guide on dev.to', href: 'https://dev.to/anishbhattaraiasm/accepting-esewa-and-khalti-in-nodejs-the-redirect-is-not-the-payment-4pgo' },
     ],
     about: [
       'nepal-pay gives Node.js apps one small API for the two most used payment gateways in Nepal: `initiate()`, `parseCallback()` and `verify()`. It signs the eSewa payment form, checks signed callbacks, converts rupees to paisa for Khalti, and confirms every payment with the gateway before an order is treated as paid.',
@@ -30,7 +31,7 @@ export const projects = [
       'The same three methods for both gateways',
       'Every payment confirmed with the gateway, with the amount checked against your own records',
       'Zero runtime dependencies; ESM, CommonJS and TypeScript types',
-      '209 unit tests plus live sandbox tests, with CI on Node.js 22, 24 and 26',
+      'Over 300 unit tests plus live sandbox tests, with CI on Node.js 22, 24 and 26',
     ],
     code: { lang: 'sh', text: 'npm i @nepalpay/esewa @nepalpay/khalti' },
   },
